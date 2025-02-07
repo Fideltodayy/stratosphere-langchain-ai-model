@@ -143,7 +143,7 @@ export default function ChatBot() {
                     disabled={isLoading}
                 >
                     <img
-                        src="/logo.png"
+                        src="/send.png"
                         className="send-btn-icon"
                         alt="Send message"
                     />
