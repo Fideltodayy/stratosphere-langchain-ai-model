@@ -1,0 +1,54 @@
+SphereID: Secure Digital Identity and Asset Management Platform
+
+Vision
+SphereID is a comprehensive digital identity and asset management platform designed to empower users with secure, seamless, and intelligent financial interactions across multiple domains.
+
+Core Features
+
+1. Secure Key Management
+- Import and manage cryptographic keys for various services
+- Support for multiple key types (e.g., OPENAI, AIRWALLEX)
+- Secure storage and sharing of sensitive credentials
+- Granular access control with time-based expiration
+
+2. Wallet and Asset Management
+- Multi-asset wallet support (ETH, Mantra, and other cryptocurrencies)
+- Real-time balance tracking
+- Easy asset transfer and transaction capabilities
+- Wallet address management and clipboard copy functionality
+
+3. Decentralized Finance (DeFi) Integration
+- Coin information and tracking
+- DeFi transaction support
+- Lending and borrowing features
+- Comprehensive asset overview
+
+4. Advanced Security Infrastructure
+- Trusted Execution Environments (TEEs)
+- Secure node selection
+- Multi-layer security protocols
+- Encrypted secret sharing mechanisms
+
+5. AI-Powered Assistance
+- AI helper for user guidance
+- Intelligent transaction and asset management
+- Contextual recommendations
+- Natural language interaction
+
+6. Rewards and Referral System
+- User engagement rewards
+- App sharing incentives
+- Community-driven growth model
+
+Technology Stack
+- React-based frontend
+- TypeScript for type-safe development
+- Telegram Apps SDK integration
+- Advanced cryptographic security
+- Real-time socket communication
+
+User Experience Principles
+- Intuitive interface
+- Seamless navigation
+- Privacy-first design
+- Cross-platform compatibility
