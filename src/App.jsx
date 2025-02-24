@@ -6,6 +6,7 @@ import { RunnablePassthrough, RunnableSequence } from "@langchain/core/runnables
 import { retriever } from './utils/retriever';
 import { combineDocuments } from './utils/combineDocuments';
 import { formatConvHistory } from './utils/formatConvHistory';
+import ReactMarkdown from 'react-markdown';
 
 export default function ChatBot() {
     const [messages, setMessages] = useState([]);
@@ -28,12 +29,12 @@ export default function ChatBot() {
     );
 
     const answerPrompt = PromptTemplate.fromTemplate(`
-        You are a helpful and enthusiastic support bot for Stratosphere ID. Answer questions based on the context and conversation history.
+        You are a helpful and enthusiastic support bot for Stratosphere ID. Answer questions based on the context and conversation history. Provide and include links whenever necessary that would navigate to the defined route. Format links as Markdown, e.g., [Secure Key Management](/sharesecret), so they can be rendered as clickable in the response. The links have been stored as embeddings in each of the features data.
         context: {context}
         conversation history: {conv_history}
         question: {question}
-        answer:`
-    );
+        answer:
+    `);
 
     const standaloneQuestionChain = standaloneQuestionPrompt
         .pipe(llm)
@@ -121,7 +122,12 @@ export default function ChatBot() {
                         key={index}
                         className={`speech ${message.isUser ? 'speech-human' : 'speech-ai'}`}
                     >
-                        {message.text}
+                        {/* Render AI responses with Markdown, plain text for user messages */}
+                        {message.isUser ? (
+                            message.text
+                        ) : (
+                            <ReactMarkdown>{message.text}</ReactMarkdown>
+                        )}
                     </div>
                 ))}
                 {isLoading && (
